@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/dimen16"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/ubh_nama"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/v1"
+        android:layout_marginTop="@dimen/dimen16"></EditText>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_below="@id/ubh_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simpan"></Button>
+
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="@dimen/dimen48"
+        android:layout_height="@dimen/dimen48"
+        android:background="@color/purple_200"
+        android:layout_toLeftOf="@id/v2"
+        android:layout_toStartOf="@id/v2"
+        android:layout_below="@id/v4"
+        />
+
+    <View
+        android:id="@+id/v2"
+        android:layout_width="@dimen/dimen48"
+        android:layout_height="@dimen/dimen48"
+        android:background="@color/black"
+        android:layout_alignParentRight="true"
+        />
+
+    <View
+        android:id="@+id/v3"
+        android:layout_width="@dimen/dimen48"
+        android:layout_height="@dimen/dimen48"
+        android:background="@color/teal_200"
+        android:layout_alignParentBottom="true"
+        />
+
+    <View
+        android:id="@+id/v4"
+        android:layout_width="@dimen/dimen48"
+        android:layout_height="@dimen/dimen48"
+        android:layout_toLeftOf="@id/v2"
+        android:layout_toStartOf="@id/v2"
+        android:background="@color/purple_700" />
+
+</RelativeLayout>
